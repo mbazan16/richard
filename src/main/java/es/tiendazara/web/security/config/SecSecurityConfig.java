@@ -38,7 +38,6 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
 			.anyRequest().authenticated())
     		.headers(headers -> headers.frameOptions().sameOrigin())
 			.formLogin((form) -> form.loginPage("/login")
-					// .loginProcessingUrl("/login")
 					.failureUrl("/loginError")
 					.successForwardUrl("/casas").permitAll())
 			.exceptionHandling().accessDeniedPage("/accessDenied")

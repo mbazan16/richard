@@ -1,7 +1,5 @@
 package es.tiendazara.web.entities;
 
-
-
 import es.tiendazara.web.common.GeneroPrenda;
 import es.tiendazara.web.common.TipoPrenda;
 import jakarta.persistence.Entity;
