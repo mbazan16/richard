@@ -1,4 +1,4 @@
-package es.tiendazara.web.controllers;
+package es.tiendazara.web.common.exception;
 
 public class ServicioException extends Exception {
 	
