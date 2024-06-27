@@ -6,5 +6,54 @@
   <body>
     <h1 th:text="#{heading.zara.after.fire}">Texto por defecto</h1>
 
+
+			<main>
+			<h2 th:text="#{tittle.text.prenda}">prenas</h2>
+			
+				<div class="container-fluid px-4">
+					<h1 class="mt-4" th:text="#{empleados.tittle}">PRendas</h1>
+					<ol class="breadcrumb mb-4">
+						<li class="breadcrumb-item active">Prendras</li>
+					</ol>
+
+					<div class="card mb-4">
+						<div class="card-header">
+							<i class="fas fa-table me-1"></i>  
+						</div>
+						<div class="card-body">
+							<table id="">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Talla</th>
+										<th>Color</th>
+										<th>Genero</th>
+										<th>Tipo</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th>ID</th>
+										<th>Talla</th>
+										<th>Color</th>
+										<th>Genero</th>
+										<th>Tipo</th>
+									</tr>
+								</tfoot>
+								<tr th:each="prenda : prendas">
+									<td th:text="${prenda.id}"></td>
+									<td th:text="${prenda.talla}"></td>
+									<td th:text="${prenda.color}"></td>
+									<td th:text="${prenda.genero}"></td>
+									<td th:text="${prenda.tipo}"></td>
+
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				</main>
+				
   </body>
 </html>

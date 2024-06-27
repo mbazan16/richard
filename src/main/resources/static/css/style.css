@@ -11442,3 +11442,25 @@ button{
 .social i{
   margin-right: 4px;
 }
+
+.bodyLogin {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-group-text {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 500px;
+}
+
+.border {
+    border-radius: 10px;
+}
+
+.shadow {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
