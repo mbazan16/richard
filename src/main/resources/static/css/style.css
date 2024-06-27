@@ -11,9 +11,10 @@
 }
 
 .bodyLogin{
-    background-image: url('../img/Landscapes/landscape_loggin_2.jpg');
+
     background-size: cover;
     background-repeat: no-repeat;
+    background-color:rgb(240, 240, 240);
 }
 
 .ojito:hover{

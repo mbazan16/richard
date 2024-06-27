@@ -27,25 +27,28 @@ public class SecSecurityConfig {
 	}
 
 
-@Bean
-public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-	http
-	.csrf().disable()
-    .authorizeHttpRequests((authz) -> authz    		
-			.requestMatchers(HttpMethod.GET, "/css/**", "/js/**", "/img/**").permitAll()
-			.requestMatchers("/admin/**").hasAnyRole("ADMIN")
-			.requestMatchers("/h2-console/**").hasAnyRole("ADMIN")
-			.anyRequest().authenticated())
-    		.headers(headers -> headers.frameOptions().sameOrigin())
-			.formLogin((form) -> form.loginPage("/login")
-					.failureUrl("/loginError")
-					.successForwardUrl("/casas").permitAll())
-			.exceptionHandling().accessDeniedPage("/accessDenied")
-			.and()
-			.logout((logout) -> logout.permitAll());
-	return http.build();
-     
-}
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+            .csrf().disable()
+            .authorizeRequests(authorize -> authorize
+                .requestMatchers(HttpMethod.GET, "/css/**", "/js/**", "/img/**").permitAll()
+                .requestMatchers("/admin/**").hasRole("ADMIN")
+                .anyRequest().authenticated()
+            )
+            .headers(headers -> headers.frameOptions().sameOrigin())
+            .formLogin(form -> form
+                .loginPage("/login")
+                .failureUrl("/loginError")
+                .successForwardUrl("/user")
+                .permitAll()
+            )
+            .exceptionHandling().accessDeniedPage("/accessDenied")
+            .and()
+            .logout(logout -> logout.permitAll());
+
+        return http.build();
+    }
      
      @Bean
      public PasswordEncoder passwordEncoder() {
