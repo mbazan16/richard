@@ -6,7 +6,7 @@ import es.tiendazara.web.common.exception.ServicioException;
 import es.tiendazara.web.entities.Prenda;
 
 public interface PrendaService{
-	List<Prenda> listAll()throws ServicioException;
+	List<Prenda> listarTodasLasPrendas()throws ServicioException;
 
 	Prenda get(Integer id)throws ServicioException;
 
