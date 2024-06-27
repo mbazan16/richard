@@ -1,7 +1,9 @@
-package es.tiendazara.app.entities;
+package es.tiendazara.web.entities;
 
-import es.tiendazara.app.common.GeneroPrenda;
-import es.tiendazara.app.common.TipoPrenda;
+
+
+import es.tiendazara.web.common.GeneroPrenda;
+import es.tiendazara.web.common.TipoPrenda;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

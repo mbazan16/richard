@@ -1,4 +1,4 @@
-package es.tiendazara.app.security.config;
+package es.tiendazara.web.security.config;
 
 
 import org.springframework.context.annotation.Bean;

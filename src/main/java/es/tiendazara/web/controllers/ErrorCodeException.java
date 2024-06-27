@@ -1,4 +1,4 @@
-package es.tiendazara.app.common.exceptions;
+package es.tiendazara.web.controllers;
 
 public class ErrorCodeException {
 	public static final String ERROR_GENERAL = "0000";

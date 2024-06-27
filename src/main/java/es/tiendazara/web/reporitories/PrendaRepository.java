@@ -1,4 +1,4 @@
-package es.tiendazara.app.repositories;
+package es.tiendazara.web.reporitories;
 
 public class PrendaRepository {
 

@@ -1,4 +1,4 @@
-package es.tiendazara.app.services.prenda;
+package es.tiendazara.web.services.prenda;
 
 public interface PrendaImpl {
 
