@@ -40,7 +40,7 @@ public class SecSecurityConfig {
             .formLogin(form -> form
                 .loginPage("/login")
                 .failureUrl("/loginError")
-                .successForwardUrl("/user")
+                .successForwardUrl("/prenda")
                 .permitAll()
             )
             .exceptionHandling().accessDeniedPage("/accessDenied")

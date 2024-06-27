@@ -23,6 +23,7 @@ public class PrendaController {
     PrendaService servicio; 
     
     @GetMapping
+    @PostMapping
     public String paginaDepartamentos(Model model) throws Exception {
         log.info("[paginaDepartamentos]");
         List<Prenda> prendas = servicio.listarTodasLasPrendas();
